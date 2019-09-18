@@ -1,10 +1,18 @@
 POST http://localhost:7071/api/DurableFunctionsOrchestrationCSharp_HttpStart
 
-# approve - copy OrchestrationId from previous request
+# approve
 POST  http://localhost:7071/api/approve/1
 Content-Type: application/json
 
 {
     "Id":1,
-    "OrchestrationId":"08e8c3ac37194e2b8279d319034ce8ad"
+    "OrchestrationId":"52f08830d343469f8a32ae8d2f889a80"
 }
+
+#stop
+POST http://localhost:7071/api/PayrollRunEmployeeCalculateFinish/b37e592241ec405b9cc62c6db095c93c/077ea891-9bcd-4281-ba19-9ea0aa6181b0
+Content-Type: application/json
+
+[{"Final":false,"Result":true,"TotalAmount":53229.2600,"Error":null,"EmployeesWithHolidayWarning":[],"PayrollRunEmployeeId":7496,"PayrollRunId":129,"CalculateFinishUrl":"https://localhost:5005/PayrollRun/CalculationFinished","PreviousTotalAmount":0.0,"PayrollRunLogId":3926,"UserName":null,"Tenant":null,"UserId":null},{"Final":false,"Result":true,"TotalAmount":39660.1000,"Error":null,"EmployeesWithHolidayWarning":[],"PayrollRunEmployeeId":7495,"PayrollRunId":129,"CalculateFinishUrl":"https://localhost:5005/PayrollRun/CalculationFinished","PreviousTotalAmount":0.0,"PayrollRunLogId":3926,"UserName":null,"Tenant":null,"UserId":null},{"Final":false,"Result":true,"TotalAmount":34510.1000,"Error":null,"EmployeesWithHolidayWarning":[],"PayrollRunEmployeeId":7497,"PayrollRunId":129,"CalculateFinishUrl":"https://localhost:5005/PayrollRun/CalculationFinished","PreviousTotalAmount":0.0,"PayrollRunLogId":3926,"UserName":null,"Tenant":null,"UserId":null},{"Final":false,"Result":true,"TotalAmount":37510.1000,"Error":null,"EmployeesWithHolidayWarning":[],"PayrollRunEmployeeId":7498,"PayrollRunId":129,"CalculateFinishUrl":"https://localhost:5005/PayrollRun/CalculationFinished","PreviousTotalAmount":0.0,"PayrollRunLogId":3926,"UserName":null,"Tenant":null,"UserId":null}]
+
+
