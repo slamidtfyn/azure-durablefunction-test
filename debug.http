@@ -1,0 +1,10 @@
+POST http://localhost:7071/api/DurableFunctionsOrchestrationCSharp_HttpStart
+
+# approve - copy OrchestrationId from previous request
+POST  http://localhost:7071/api/approve/1
+Content-Type: application/json
+
+{
+    "Id":1,
+    "OrchestrationId":"08e8c3ac37194e2b8279d319034ce8ad"
+}
